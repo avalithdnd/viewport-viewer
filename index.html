@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>ViewportViewer by Avalith Development &amp; Design</title>
+		<meta name="description" content="Viewport Viewer is a tool that helps explain what Responsive Web Design looks like.">
+
+		<!-- Google Webfonts -->
+		<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+			body {
+				padding-top: 80px; /* changed from default 60px for bigger navbar */
+				padding-bottom: 40px;
+			}
+		</style>
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+		<script type="text/javascript">
+			function frameReady(frame) {
+				if (typeof jQuery != 'undefined') {
+					$('#' + frame + '_loading').hide();
+					$('#' + frame + '_icon').show();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+
+		<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+		<div id="main-nav" class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="http://tools.avalith.com/viewportviewer/">ViewportViewer</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li id="welcomeButton" class="active"><a href="javascript:void(0);" onClick="swapFrames('welcome','welcomeButton');">About</a></li>
+						</ul>
+						<form id="input-form" class="navbar-search" action="javascript:respond();">
+							<input id="input" type="text" class="search-query" placeholder="http://" />
+							<input id="submit" class="btn btn-small" type="submit" value="Go" />
+						</form>
+						<div id="logo" class="pull-right">
+							<a href="http://avalith.com?src=viewportviewer"></a>
+						</div>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+
+			<div class="row-fluid">
+
+				<div class="span2">
+
+					<ul class="nav nav-pills nav-stacked">
+						<li class="nav-header">Viewports</li>
+						<li id="iphone_button" class=""><a href="javascript:void(0);" onClick="swapFrames('iphone','iphone_button');"><i id="iphone_loading" class="icon-spinner icon-spin"></i><i class="icon-mobile-phone" id="iphone_icon"></i> iPhone</a></li>
+						<li id="iphoneL_button"><a href="javascript:void(0);" onClick="swapFrames('iphoneL','iphoneL_button');"><i id="iphoneL_loading" class="icon-spinner icon-spin"></i><i class="icon-mobile-phone" id="iphoneL_icon"></i> iPhone Landscape</a></li>
+						<li id="iphone5_button"><a href="javascript:void(0);" onClick="swapFrames('iphone5','iphone5_button');"><i id="iphone5_loading" class="icon-spinner icon-spin"></i><i class="icon-mobile-phone" id="iphone5_icon"></i> iPhone 5</a></li>
+						<li id="iphone5L_button"><a href="javascript:void(0);" onClick="swapFrames('iphone5L','iphone5L_button');"><i id="iphone5L_loading" class="icon-spinner icon-spin"></i><i class="icon-mobile-phone" id="iphone5L_icon"></i> iPhone 5 Landscape</a></li>
+						<li id="smallTablet_button"><a href="javascript:void(0);" onClick="swapFrames('ipad','smallTablet_button');"><i id="smallTablet_loading" class="icon-spinner icon-spin"></i><i class="icon-tablet" id="smallTablet_icon"></i> iPad</a></li>
+						<li id="smallTabletL_button"><a href="javascript:void(0);" onClick="swapFrames('ipadL','smallTabletL_button');"><i id="smallTabletL_loading" class="icon-spinner icon-spin"></i><i class="icon-tablet" id="smallTabletL_icon"></i> iPad Landscape</a></li>
+						<li id="ipad_button"><a href="javascript:void(0);" onClick="swapFrames('smallTablet','ipad_button');"><i id="ipad_loading" class="icon-spinner icon-spin"></i><i class="icon-tablet" id="ipad_icon"></i> Small Tablet</a></li>
+						<li id="ipadL_button"><a href="javascript:void(0);" onClick="swapFrames('smallTabletL','ipadL_button');"><i id="ipadL_loading" class="icon-spinner icon-spin"></i><i class="icon-tablet" id="ipadL_icon"></i> Small Tablet Landscape</a></li>
+					</ul>
+
+					<!--<hr>
+
+					<ul class="nav nav-pills nav-stacked" style="margin-bottom:.5em;">
+						<li class="nav-header">Examples</li>
+					</ul>
+
+					<div class="btn-group" data-toggle="buttons-radio">
+						<button type="button" class="btn btn-small" id="example-good" onClick="callRespond('http://avalith.com');">Responsive</button>
+						<button type="button" class="btn btn-small" id="example-bad" onClick="callRespond('http://wunderground.com');">Non-Responsive</button>
+					</div> -->
+
+					<hr>
+
+					<!--  UPCOMING FEATURE!  HOW EXCITING!
+					<ul class="nav nav-pills nav-stacked" style="margin-bottom:.5em;;">
+						<li class="nav-header">Tools</li>
+					</ul>
+
+					<div class="btn-group" data-toggle="buttons-radio">
+						<button type="button" class="btn active" onClick="themeSwap(1);">Light</button>
+						<button type="button" class="btn" onClick="themeSwap(0);">Dark</button>
+					</div>--><!-- /btn-group -->
+
+					<button id="reset-button" type="button" class="btn" onClick="callRespond('');">Reset Viewports</button>
+
+				</div><!-- /span2 -->
+
+
+				<div class="span10">
+					<figure id="welcome" class="hero-unit">
+						<h1 id="hi">Hi.</h1>
+						<p>Welcome to ViewportViewer by Avalith. &nbsp;We built this tool to solve a problem: &nbsp;we talk about responsive web design a lot, and we finally have a way to quickly and easily <em>demonstrate</em> it. &nbsp;Here you can easily see how your site will look on any given mobile device. &nbsp;You <em>could</em> go buy every tablet and phone out there, but we figured this was cheaper.</p>
+
+						<p class="small">To get started, just enter a web address in the bar above and press "Go." &nbsp;Your site will be loaded into a few viewports, which are references to the exact sizes and shapes of some common devices. &nbsp;As a general rule: &nbsp;<strong>If you see a horizontal scroll bar at the bottom of a viewport, that site is not responsive</strong> as seen <a href="javascript:void(0);" onClick="callRespond('http://wunderground.com');">here</a>. &nbsp;A responsive site will adapt to the screen area it is given, like <a href="javascript:void(0);" onClick="callRespond('http://avalith.com');">this good example</a>.</p>
+
+						<p>We hope you enjoy using VPV as much as we did building it.</p>
+
+						<br>
+
+						<span id="signature"></span>
+
+						<p class="tiny"><u>Please Note</u>: &nbsp;some websites don't allow their pages to be loaded into a frame within another website (like we're doing here). &nbsp;Those sites (such as MSN.com, or Facebook.com) will simply take you away from this page without so much as a warning. &nbsp;If we could stop that, we would.</p>
+
+					</figure>
+
+					<figure id="iphone">
+						<iframe id="iphone_iframe" onLoad="frameReady('iphone');"></iframe>
+					</figure><!-- /iphone -->
+
+					<figure id="iphoneL">
+						<iframe id="iphoneL_iframe" onLoad="frameReady('iphoneL');"></iframe>
+					</figure><!-- /iphoneL -->
+
+					<figure id="iphone5">
+						<iframe id="iphone5_iframe" onLoad="frameReady('iphone5');"></iframe>
+					</figure><!-- /iphone5 -->
+
+					<figure id="iphone5L">
+						<iframe id="iphone5L_iframe" onLoad="frameReady('iphone5L');"></iframe>
+					</figure><!-- /iphone5L -->
+
+					<figure id="smallTablet">
+						<iframe id="smallTablet_iframe" onLoad="frameReady('smallTablet');"></iframe>
+					</figure><!-- /smallTablet -->
+
+					<figure id="smallTabletL">
+						<iframe id="smallTabletL_iframe" onLoad="frameReady('smallTabletL');"></iframe>
+					</figure><!-- /smallTabletL -->
+
+					<figure id="ipad">
+						<iframe id="ipad_iframe" onLoad="frameReady('ipad');"></iframe>
+					</figure><!-- /ipad -->
+
+					<figure id="ipadL">
+						<iframe id="ipadL_iframe" onLoad="frameReady('ipadL');"></iframe>
+					</figure><!-- /ipadL -->
+				</div><!-- /col10 -->
+
+				<div class="clearfix"></div>
+
+			</div>
+
+			<hr>
+
+			<footer>
+				<p>Built with love by <a href="http://avalith.com?src=viewportviewer" target="_blank">Avalith Development &amp; Design</a>.<br>ViewportViewer is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br>v1.0</p>
+			</footer>
+
+
+
+
+		</div> <!-- /container-fluid -->
+
+		<script src="js/vendor/jquery-1.9.0.min.js"></script>
+
+		<script src="js/vendor/bootstrap.min.js"></script>
+
+		<script src="js/main.js"></script>
+
+		<script>
+			var _gaq=[['_setAccount','UA-30417753-2'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+/* ===========================================
+	Fonts
+   =========================================== */
+
+@font-face {
+	font-family: 'Avalith'; /* Conv_Futura-Book */
+	src: url('../font/Futura-Book.eot');
+	src: local('☺'), url('../font/Futura-Book.woff') format('woff'), url('../font/Futura-Book.ttf') format('truetype'), url('../font/Futura-Book.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+/* ===========================================
+	IDs
+   =========================================== */
+
+/* IFRAMES */
+	#iphone_iframe { width: 337px; height: 480px; }
+	#iphoneL_iframe { width: 497px; height: 320px; }
+	#iphone5_iframe { width: 337px; height: 568px; }
+	#iphone5L_iframe { width: 584px; height: 320px; }
+	#smallTablet_iframe { width: 497px; height: 640px; }
+	#smallTabletL_iframe { width: 657px; height: 480px; }
+	#ipad_iframe { width: 785px; height: 1024px; }
+	#ipadL_iframe { width: 1041px; height: 768px; }
+
+/* CONTAINERS */
+	#iphone { width: 320px; height: 480px; }
+	#iphoneL { width: 480px; height: 320px; }
+	#iphone5 { width: 320px; height: 568px; }
+	#iphone5L { width: 567px; height: 320px; }
+	#smallTablet { width: 480px; height: 640px; }
+	#smallTabletL { width: 640px; height: 480px; }
+	#ipad { width: 768px; height: 1024px; }
+	#ipadL { width: 1024px; height: 768px; }
+
+#example-good { border: 1px solid #46a546; }
+#example-bad { border: 1px solid #9d261d; }
+#input-form { position: absolute; top: 10px; left: 50%; margin-left: -143px; }
+#logo a { padding: 0px; display: block; width: 255px; height: 60px; overflow: hidden; background: url(../img/logo.png) no-repeat; }
+#logo.inverse a { background-position: 0px -60px; }
+#reset-button { display: block; margin-top: .5em; border: 1px solid #9d261d; }
+#signature { display: block; width: 153px; height: 30px; overflow: hidden; background: url(../img/avalith_team_sig.png) no-repeat; }
+#signature.inverse { background-position: 0px -30px; }
+#submit { margin-top: 0 !important; }
+
+
+/* ===========================================
+	Classes
+   =========================================== */
+
+.affix { position: fixed; bottom: 0; }
+.brand { font-family: Avalith, sans-serif; font-size: 32px !important; margin-top: 10px; -webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -ms-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; transition: all 0.2s ease-out; }
+.brand:hover { color: #000 !important; text-shadow: 0 0 20px #46b1e1, 0 0 50px #46b1e1 !important; }
+.hero-unit p { font-size: 1.2em; line-height: 1.2em; }
+.hero-unit > .small { font-size: 0.8em; line-height: 1.2em; margin-top: 1em; margin-bottom: 1em; }
+.hero-unit > .tiny { font-size: 0.6em; line-height: 1.2em; margin-top: 4em; margin-bottom: -1em; }
+.icon-spinner { color: #000; }
+.nav-stacked > li.active a i { color: #fff; }
+
+
+/* ===========================================
+	Elements
+   =========================================== */
+
+::selection{background-color:#46b1e1;color:#fff;}
+
+body { font-family: Cabin, sans-serif !important; }
+body.inverse { background-color: #333 !important; color: #fff; }
+
+a { outline: 0 !important; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Avalith, sans-serif !important;
+}
+
+p { font-family: Cabin, sans-serif; }
+
+nav {}
+
+hr.inverse { border-top: 1px solid #111; border-bottom: 1px solid #000; }
+
+i { color: #000; }
+
+figure {
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+	iframe {
+		border: none;
+		background-color: rgba(0,0,0,0.1);
+		height: 100%;
+	}
+
+footer { font-size: 0.8em; line-height: 1.5em; }
+
+
+
+/* Bootstrap Navbar */
+.navbar-inner { min-height: 60px !important; }
+.navbar-inner .container-fluid .nav-collapse .nav li { font-size: 20px; line-height: 40px !important; }
